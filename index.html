@@ -1,0 +1,311 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlanScale</title>
+
+<style>
+
+:root{
+--bg:#ffffff;
+--text:#1d1d1f;
+--secondary:#6e6e73;
+--accent:#0071e3;
+--card:#f5f5f7;
+}
+
+@media (prefers-color-scheme: dark){
+
+:root{
+--bg:#000000;
+--text:#f5f5f7;
+--secondary:#a1a1a6;
+--card:#1c1c1e;
+}
+
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
+background:var(--bg);
+color:var(--text);
+}
+
+header{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark){
+header{
+background:rgba(0,0,0,0.6);
+}
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:var(--accent);
+font-weight:500;
+}
+
+.hero{
+text-align:center;
+padding:140px 20px 120px;
+background:linear-gradient(180deg,#f5f5f7,transparent);
+}
+
+@media (prefers-color-scheme: dark){
+.hero{
+background:linear-gradient(180deg,#111,transparent);
+}
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+color:var(--secondary);
+max-width:650px;
+margin:auto;
+}
+
+.cta{
+margin-top:30px;
+}
+
+.cta button{
+background:var(--accent);
+border:none;
+padding:14px 28px;
+border-radius:25px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:100px 20px;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:34px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--card);
+padding:35px;
+border-radius:20px;
+}
+
+.screenshots{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.screenshot{
+background:var(--card);
+height:420px;
+border-radius:25px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--secondary);
+font-size:14px;
+}
+
+.support{
+background:var(--card);
+padding:80px 20px;
+text-align:center;
+}
+
+.support-box{
+max-width:700px;
+margin:auto;
+}
+
+.email{
+font-size:18px;
+font-weight:600;
+margin-top:10px;
+}
+
+.privacy{
+max-width:900px;
+margin:auto;
+padding:100px 20px;
+line-height:1.6;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:var(--secondary);
+border-top:1px solid rgba(0,0,0,0.08);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">PlanScale</div>
+
+<nav>
+<a href="#features">Features</a>
+<a href="#screens">Screenshots</a>
+<a href="#support">Support</a>
+<a href="#privacy">Privacy</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>PlanScale</h1>
+
+<p>
+A smarter way to plan, organize tasks, and stay productive.
+Designed to help you scale your ideas into actionable plans.
+</p>
+
+<div class="cta">
+<button onclick="document.getElementById('features').scrollIntoView()">Explore Features</button>
+</div>
+
+</section>
+
+<section id="features" class="section">
+
+<h2>Powerful Features</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Smart Planning</h3>
+<p>Create structured plans quickly and keep everything organized.</p>
+</div>
+
+<div class="card">
+<h3>Task Management</h3>
+<p>Track tasks, progress, and priorities in one streamlined workflow.</p>
+</div>
+
+<div class="card">
+<h3>Productivity Focus</h3>
+<p>Built to reduce friction and help you accomplish more every day.</p>
+</div>
+
+<div class="card">
+<h3>Simple & Fast</h3>
+<p>Clean interface designed for speed, clarity, and ease of use.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="screens" class="section">
+
+<h2>App Screenshots</h2>
+
+<div class="screenshots">
+
+<div class="screenshot">App Screenshot</div>
+<div class="screenshot">App Screenshot</div>
+<div class="screenshot">App Screenshot</div>
+
+</div>
+
+</section>
+
+<section id="support" class="support">
+
+<div class="support-box">
+
+<h2>Support</h2>
+
+<p>If you need help with PlanScale please contact us.</p>
+
+<div class="email">
+arz.devapp@gmail.com
+</div>
+
+<p>Typical response time: 24–48 hours.</p>
+
+</div>
+
+</section>
+
+<section id="privacy" class="privacy">
+
+<h2>Privacy Policy</h2>
+
+<p>
+PlanScale respects your privacy and is committed to protecting user information.
+</p>
+
+<p>
+The application may collect minimal anonymous data necessary for functionality,
+performance monitoring, and improving the user experience.
+</p>
+
+<p>
+No personal data is sold or shared with third parties.
+</p>
+
+<p>
+If you have any questions about this privacy policy or data handling,
+please contact:
+</p>
+
+<p>
+arz.devapp@gmail.com
+</p>
+
+</section>
+
+<footer>
+
+© 2026 PlanScale — ARZ Dev Apps
+
+</footer>
+
+</body>
+</html>
+```
